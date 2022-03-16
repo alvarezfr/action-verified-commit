@@ -1,0 +1,22 @@
+name: 'Verified commit'
+description: 'Use bot tokens to create verified commits'
+author: 'alvarezrf'
+inputs:
+  path:
+    required: true
+    description: 'The path of the git repository'
+    default: '.'
+  branch:
+    required: false
+    description: The branch to commit to. If not specified, it will use the branch checked out.
+  token:
+    required: true
+    description: 'The token to use when communicating with the REST API to make the commits.'
+    default: ${{ github.token }}
+  commit-message:
+    required: true
+    description: 'The message to use when commit'
+    default: 'Automated commit using the action alvarezfr/action-verified-commit'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -1,0 +1,37 @@
+{
+  "name": "action-verified-commit",
+  "version": "1.0.0",
+  "description": "GitHub action to make commits with bots and get the verified check.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ./src",
+    "build": "ncc build src/index.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvarezfr/action-verified-commit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvarezfr/action-verified-commit/issues"
+  },
+  "homepage": "https://github.com/alvarezfr/action-verified-commit#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "simple-git": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "prettier": "2.5.1"
+  }
+}
